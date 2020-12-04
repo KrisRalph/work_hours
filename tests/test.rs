@@ -1,8 +1,7 @@
 #[cfg(test)]
 mod tests {
-    use chrono::{Utc, TimeZone, DateTime, Datelike, Timelike, Weekday};
+    use chrono::{Utc, TimeZone};
     use workday_finder::{is_work_hours, is_weekday};
-    use std::fmt::Display;
 
     #[test]
     fn test_8_59() {
