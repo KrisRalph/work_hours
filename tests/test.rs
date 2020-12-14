@@ -1,7 +1,7 @@
 #[cfg(test)]
 mod tests {
     use chrono::{Utc, TimeZone};
-    use workday_finder::{is_work_hours, is_weekday};
+    use work_hours::{is_work_hours, is_weekday};
 
     #[test]
     fn test_8_59() {

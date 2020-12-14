@@ -1,5 +1,5 @@
 [package]
-name = "launch_browser"
+name = "work_hours"
 version = "0.1.0"
 authors = ["Kris Ralph <kris.ralph45@gmail.com>"]
 edition = "2018"
@@ -10,4 +10,4 @@ edition = "2018"
 chrono = "0.4.19"
 
 [lib]
-name = "workday_finder"
+name = "work_hours"
