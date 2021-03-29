@@ -1,7 +1,7 @@
-use chrono::{Utc, DateTime, Timelike, Datelike, Weekday};
+use chrono::{Local, DateTime, Timelike, Datelike, Weekday};
 static WEEKENDS: &'static [Weekday] = &[Weekday::Sat, Weekday::Sun];
 
-pub fn is_work_hours(dt: DateTime::<Utc>) -> bool {
+pub fn is_work_hours(dt: DateTime::<Local>) -> bool {
     let cur_hour   = dt.hour();
     let cur_minute = dt.minute();
     if cur_hour == 17 {
@@ -16,7 +16,7 @@ pub fn is_work_hours(dt: DateTime::<Utc>) -> bool {
     return false;
 }
 
-pub fn is_weekday(dt: DateTime::<Utc>) -> bool {
+pub fn is_weekday(dt: DateTime::<Local>) -> bool {
     let weekday = dt.weekday();
     for &x in WEEKENDS {
         if weekday == x {

@@ -1,9 +1,9 @@
 use work_hours::{is_weekday, is_work_hours};
-use chrono::Utc;
+use chrono::Local;
 use std::process::Command;
 
 fn main() {
-    let dt = Utc::now();
+    let dt = Local::now();
     // println!("is_weekday: {}", is_weekday(dt));
     // println!("is_work_hours: {}", is_work_hours(dt));
     if is_weekday(dt) && is_work_hours(dt) {
